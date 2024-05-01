@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Gestalt Principles" content="An introductory look at the Gestalt principles. Focusing on Nielsen Norman group's interpritation."/>
+    <!-- meta tags for Internet Explorer and mobile devices -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uni Course work about something maybe</title>
+    <!-- add your stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+    <script rel="script" src="js/script.js"></script>
+</head>
+ 
+<body>
+    <main>
+
+        <header class="page-header">
+
+            <div class="header-content">
+
+                <h1>So what is the trolley problem?</h1>
+                
+                <p>An examination of ethical behaviour</p>
+
+            </div>
+            
+        </header>
+
+        <!--Scroll to page sections-->
+        <section id="navBarContainer" class="navBarContainer">   
+                <button class="mobileNavMenu" onclick="expandNavMenu()">Expand</button>
+                <button class="navButton" onclick="navFunc('section1')">History</button>
+                <button class="navButton" onclick="navFunc('section2')">More Text</button>
+                <button class="navButton" onclick="navFunc('section3')">Quiz</button>
+                <button class="navButton" onclick="navFunc('section4')">Contact Me</button>
+            
+        </section>
+
+
+        <section id="section1">
+            <h2>History of the Trolley Problem</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Egestas tellus rutrum tellus pellentesque eu tincidunt. Consequat ac felis donec et odio pellentesque diam. Nam libero justo laoreet sit amet cursus sit amet dictum. Praesent semper feugiat nibh sed. Massa eget egestas purus viverra.</p>
+
+                <p>Lorem ipsum dolor sit amet, <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiXh-jcxpmEAxUUSUEAHdcaCPYQFnoECBUQAQ&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTrolley_problem&usg=AOvVaw0jhDpEdR3Izjf0M9VTR-9P&opi=89978449">consectetur</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Egestas tellus rutrum tellus pellentesque eu tincidunt. Consequat ac felis donec et odio pellentesque diam. Nam libero justo laoreet sit amet cursus sit amet dictum. Praesent semper feugiat nibh sed. Massa eget egestas purus viverra.</p>
+        
+        </section>
+
+        
+        <section id="section2" class="embedded-content">
+            <h2>A discussion of the trolley problem</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yg16u_bzjPE"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </section>
+
+
+        <section id="section3">
+            <div id="quizStart" class="quizElem">
+                <h2>Test your knowledge</h2>
+                <p>Take this short quiz to test your knowledge of gestalt principles.</p>
+
+                <button id="quizStartButton" onclick="startQuiz()">Start</button>
+            </div>
+
+            <div id="quizFormContainer" class="quizElem" hidden>
+                <form id="quizForm">
+                    <p>Choose 1:</p>
+
+                        <input type="radio" id="q1Ans1" name="q1Ans1" value="one"/>
+                        <label for="q1Ans1">one</label><br/>   
+                        <input type="radio" id="q1Ans2" name="q1Ans2" value="two"/>
+                        <label for="q1Ans2">two</label><br/>
+                        <input type="radio" id="q1Ans3" name="q1Ans3" value="three"/>
+                        <label for="q1Ans3">three</label><br/><br/>
+
+                    <p>Choose 2:</p>
+
+                        <input type="radio" id="q2Ans1" name="q2Ans1" value="one"/>
+                        <label for="q2Ans1">one</label><br/>   
+                        <input type="radio" id="q2Ans2" name="q2Ans2" value="two"/>
+                        <label for="q2Ans2">two</label><br/>
+                        <input type="radio" id="q2Ans3" name="q2Ans3" value="three"/>
+                        <label for="q2Ans3">three</label><br/><br/>
+
+                    <p>Choose 3:</p>
+                    
+                        <input type="radio" id="q3Ans1" name="q3Ans1" value="one"/>
+                        <label for="q3Ans1">one</label><br/>   
+                        <input type="radio" id="q3Ans2" name="q3Ans2" value="two"/>
+                        <label for="q3Ans2">two</label><br/>
+                        <input type="radio" id="q3Ans3" name="q3Ans3" value="three"/>
+                        <label for="q3Ans3">three</label><br/><br/>
+
+                    <input type="button" value="See Result" onclick="submitAns()"/>
+                </form>
+            </div>
+
+            <div id="quizEnd" class="quizElem" hidden>
+                <h3 id="scoreTotal"></h3>
+                <button onclick="restartQuiz()">Restart</button>
+            </div>
+
+        <section id="section4">
+
+            <h2>Contact me for more information</h2>
+
+            <form action="https://formspree.io/[your email address goes here]" method="post">
+                <p>
+                    <label for="contact-name">Your Name</label><br/>
+                    <input id="contact-name" type="text" name="contact-name"> </p>
+                <p>
+                    <label for="contact-email">Your email address</label><br/>
+                    <input id="contact-email" type="email" name="contact-email"> </p>
+                <p>
+                    <label for="contact-phone">Your phone number</label><br/>
+                    <input id="contact-phone" type="tel" name="contact-phone"> </p>
+                <p>How would you like to be contacted?</p>
+                <p>
+                    <input id="contactPreferenceSMS" type="checkbox" name="contactPreference">
+                    <label for="contactPreferenceSMS">SMS</label>
+                    
+                    <input id="contactPreferencePhoneCall" type="checkbox" name="contactPreference">
+                    <label for="contactPreferencePhoneCall">Phone Call</label>
+                    
+                    <input id="contactPreferenceEmail" type="checkbox" name="contactPreference">
+                    <label for="contactPreferenceEmail">Email</label>
+
+                </p>    
+                <p>
+                    <label for="contact-message">Your message</label><br/>
+                    <textarea id="contact-message" name="contact-message" rows="5"> </textarea>
+                </p>
+                <p>
+                    <input type="submit" value="Send my message"> </p>
+            </form>
+        
+        </section> 
+
+        </section>
+        <footer class="page-footer">
+            <div class="footer-content">
+                <p>
+
+                    <span class="footer-text">Rosie Pelusi</span>
+                    <span class="footer-separator">&middot;</span>
+                    <span class="footer-text">This is my coursework</span>
+
+
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
