@@ -15,7 +15,7 @@ function navFunc(sectionName) {
 //Expand/collapse mobile nav menu
 function expandNavMenu() {
     var isButtonHidden = document.getElementsByClassName("navButton");
-    var isButtonShown = document.getElementsByClassName("navButton.display");
+    var isButtonShown = document.getElementsByClassName("navButtonDisplay");
 
     //console.log(isButtonHidden);
     //console.log(isButtonShown);
@@ -27,7 +27,7 @@ function expandNavMenu() {
             for (let i = 0; i < isButtonHidden.length; i++) {
                 const hiddenButtons = isButtonHidden[i];
         
-                hiddenButtons.className += ".display";
+                hiddenButtons.className = "navButtonDisplay";
                 //console.log("showing");
             }
         }
@@ -71,6 +71,8 @@ function submitAns() {
     const ansArr = [q1Ans, q2Ans, q3Ans];
     var finalScore = 0;
 
+    //console.log(ansArr);
+
     //marking logic
     for (let i = 0; i < ansArr.length; i++) {
         const currentAns = ansArr[i];
@@ -85,6 +87,7 @@ function submitAns() {
 
     quizQs.hidden = true;
     quizEnd.hidden = false;
+    
 }
 
 //Restart quiz and set tabbing focus to quiz start

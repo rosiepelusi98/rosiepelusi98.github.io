@@ -17,7 +17,8 @@ body {
     font-family: 'Readex Pro', sans-serif;
     font-size: 120%;
     line-height: 1.65;
-    color: #0A122A;
+    color: #e9e3d4;
+    background-color: #262626;
 }
 
 input,
@@ -34,16 +35,28 @@ ul {
     padding: 0;
 }
 
+h1,
+h2,
+h3 {
+    color: #eeba2b;
+}
+
 p {
     margin: 0;
     padding: 0 0 1rem 0;
 }
 
 a {
-    text-decoration-color: #A8201A;
+    text-decoration-color: #eeba2b;
     text-decoration-thickness: 2px;
-    color: #0A122A;
+    color: #eeba2b;
     ;
+}
+
+a:visited{
+    text-decoration-color: #ebcd7c;
+    text-decoration-thickness: 2px;
+    color: #ebcd7c;
 }
 
 /* flexible content images */
@@ -72,11 +85,11 @@ section iframe {
 section h2 {
     line-height: 1.2;
     padding: 0 0 1rem 0;
-    color: #A8201A;
+    color: #fdd86b;
 }
 
 .page-header {
-    background-color: #ff3c3c48;
+    background-color: #c0af1248;
     background-image: url(../images/trolley.jpg);
     background-blend-mode: screen;
     background-size: cover;
@@ -120,7 +133,6 @@ section h2 {
     color: #fff;
 }
 
-form input,
 form textarea {
     font-size: 1.4rem;
     padding: 5px;
@@ -129,17 +141,6 @@ form textarea {
     max-width: 100%;
     min-width: 80%;
 }
-
-form input[type="submit"] {
-    background: #c30;
-    border: 1px solid #c30;
-    min-width: auto;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin-top: 1rem;
-    color: #fff;
-} 
 
 /*My CSS*/
 
@@ -164,14 +165,14 @@ button {
     max-width: 100vw;
     margin: 0;
     padding: 0;
-    background-color: #ff3c3c48;
+    background-color: #eeba2b;
     padding: 0;
     align-self: auto;
     text-align: center;
 }
 
 .navButton {
-    background-color: #ff3c3c00;      
+    background-color: #eeba2b;      
     padding: 1rem 2rem;
     border-bottom:1px solid #ff3c3c00;
 }
@@ -186,6 +187,22 @@ button {
     display: none;  
 }
 
+.buttonSecondary {
+    background-color: #eeba2b;
+    border-bottom: 1px solid #472020;
+    padding: 0.5rem 1rem;
+}
+
+.buttonSecondary:hover {
+    background-color: #f2c03685;
+    border-bottom: 1px solid #472020;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+/*.sectionStripes{
+    background-color: 
+}*/
 
 /*Responsive CSS*/
 @media screen and (max-width: 600px) {
@@ -198,7 +215,7 @@ button {
         display: none;
     }
 
-    .navbutton.display {
+    .navButtonDisplay {
         margin: 0.5rem 25vw;
         background-color: #ff3c3c00;      
         padding: 0;
@@ -208,9 +225,10 @@ button {
     
     .mobileNavMenu {
         display: block;
-        background-color: #ff3c3c00;      
+        background-color: #ff3c3c00; 
+        /*background: url(.../images/hamburgerIco.png);*/    
         padding: 1rem 2rem;
         border-bottom:1px solid #ff3c3c00;
     }
-
+    
 }
