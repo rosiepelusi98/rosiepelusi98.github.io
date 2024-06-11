@@ -7,7 +7,7 @@
     <!-- meta tags for Internet Explorer and mobile devices -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Uni Course work about something maybe</title>
+    <title>Gestalt Principles in Design</title>
     <!-- add your stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,96 +20,195 @@
 <body>
     <main>
 
-        <header class="page-header">
+        <header id="pageHeader" class="page-header">
 
             <div class="header-content">
 
-                <h1>So what is the trolley problem?</h1>
+                <h1>The Gestalt Principles in Design</h1>
 
-                <p>An examination of ethical behaviour</p>
+                <p>An introduction to the Laws of Perception</p>
 
             </div>
-            
+          
         </header>
 
         <!--Scroll to page sections-->
         <section id="navBarContainer" class="navBarContainer">   
-                <button class="mobileNavMenu" onclick="expandNavMenu()">Expand</button>
-                <button class="navButton" onclick="navFunc('section1')">History</button>
-                <button class="navButton" onclick="navFunc('section2')">More Text</button>
-                <button class="navButton" onclick="navFunc('section3')">Quiz</button>
-                <button class="navButton" onclick="navFunc('section4')">Contact Me</button>
-            
+            <button id="topScroll" class="topScrollHidden" onclick="navFunc('pageHeader')"><img src="images/icon.png" alt="Scroll to top. Logo made up of a grid of four circles, two yellow and two white."/></button>
+            <button class="mobileNavMenu" onclick="expandNavMenu()"><img src="images/hamburgerIcon.png" alt="Hamburger icon for expanding/collapsing navigation"/></button>            
+            <button class="navButton" onclick="navFunc('section1')">Introduction</button>
+            <button class="navButton" onclick="navFunc('section2')">Explanations</button>
+            <button class="navButton" onclick="navFunc('section3')">Proximity</button>
+            <button class="navButton" onclick="navFunc('section4')">Video</button>
+            <button class="navButton" onclick="navFunc('section5')">Quiz</button>
+            <button class="navButton" onclick="navFunc('section6')">Contact Us</button> 
+
         </section>
 
+        <!--fix for the side nav bar not returning correctly-->
+        <div id="navFix"></div>
 
-        <section id="section1" class="sectionStripes">
-            <h2>An Introduction to the Gestalt Principles</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do Link me tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Egestas tellus rutrum tellus pellentesque eu tincidunt. Consequat ac felis donec et odio pellentesque diam. Nam libero justo laoreet sit amet cursus sit amet dictum. Praesent semper feugiat nibh sed. Massa eget egestas purus viverra.</p>
-                <p>Lorem ipsum dolor sit amet, <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwiXh-jcxpmEAxUUSUEAHdcaCPYQFnoECBUQAQ&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTrolley_problem&amp;usg=AOvVaw0jhDpEdR3Izjf0M9VTR-9P&amp;opi=89978449">consectetur</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam. Egestas tellus rutrum tellus pellentesque eu tincidunt. Consequat ac felis donec et odio pellentesque diam. Nam libero justo laoreet sit amet cursus sit amet dictum. Praesent semper feugiat nibh sed. Massa eget egestas purus viverra.</p>
+        <section id="section1" class="section1">
+            <h2>What is Gestalt psychology?</h2>
+           
+            <p>
+                Gestalt principles, or laws of perception, are a framework for understanding human
+                perception and tendency for pattern seeking (Bustamante, N 2023). These laws see
+                use across different disciplines such as psychology, education, and visual design.
+                Max Wertheimer is considered the founder of this school of psychology when he
+                published his paper “Experimentelle Studien über das Sehen von Bewegung”
+                (“Experimental Studies of the Perception of Movement”) in 1912 (<a href="https://www.britannica.com/science/Gestalt-psychology" alt="Link to Encyclopaedia Brittanica's entry Gestalt Psychology">Encyclopaedia
+                Brittanica 2024</a>).
+            </p>
         
         </section>
 
-        
-        <section id="section2" class="embedded-content">
-            <h2>Gestalt Principles in Action</h2>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/yg16u_bzjPE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <section id="section2">
+            <h2>What are the principles?</h2>
+
+            <p>
+                The Gestalt principles have seen some change since they were first introduced in
+                the early 20th century and may vary depending on the discipline applying them. In the
+                case of design Nielsen Norman Group suggest that similarity, continuation, closure,
+                proximity, common region, figure/ground, and symmetry apply best (Gordon, K2020). Their reasoning can be found in their article <a href="https://www.nngroup.com/articles/principles-visual-design/" alt="Link to Nielsen Norman group's article Principles of Visual Design in UX by Kelly Gordon">Principles of Visual Design in UX</a>.
+            </p>
+
+            <p>Similarity – Elements that share characteristics are perceived as grouped.</p>
+            <div class="imageContainer">
+                <img src="images/similarity.png" alt="Image with nine dots in a grid, three arranged horizontally in the middle are blue and the rest are black."/>
+            </div>  
+
+            <p>Continuation – The human eye prefers to follow a flow of a line and will ignore any
+                breaks in that line.</p>
+            <div class="imageContainer">
+                <img src="images/continuation.png" alt="Image showing two curved black lines crossing over in an 'x' pattern. One line has a dotted blue arrow demonstrating a continuous flow."/>
+            </div>  
+
+            <p>Closure – The brain prefers to see complete shapes and will “fill in the gaps” where
+                necessary.</p>
+            <div class="imageContainer">
+                <img src="images/closure.png" alt="Image depicting a square and circle made up of dotted lines."/>
+            </div>  
+
+            <p>Proximity – Elements that are closer together are grouped together.</p>
+            <div class="imageContainer">
+                <img src="images/proximity.png" alt="Image showing four black squares. Three are on the right close together in a triangle shape, one is further away on the left."/>
+            </div>  
+
+            <p>Common Region – Elements in an enclosed area are seen as part of a group even if
+                they share characteristics with other elements.</p>
+            <div class="imageContainer">
+                <img src="images/commonRegion.png" alt="Image with nine black squares in a grid. The four squares in the top left quadrant are enclosed in a blue square."/>
+            </div>  
+
+            <p>Figure/Ground – An element that contrasts its background draws the eye first.</p>
+            <div class="imageContainer">
+                <img src="images/figureGround.png" alt="Image depicting a black and white Rubin's vase, an optical illusion that appears to be either two faces looking at each other or a vase depending on the viewer's focus."/>
+            </div>  
+
+            <p>Symmetry – Humans prefer to see symmetry and can differentiate elements better
+                when laid out in a grid like pattern.</p>
+            <div class="imageContainer">
+                <img src="images/symmetry.png" alt="Image of two sets of brackets. One set, on the right, has a square bracket on the left and a curly bracket on the right, the other set to the left is made up of two curly brackets."/>
+            </div>  
+
+            <p>These images have been modified from the <a href="https://www.interaction-design.org/literature/topics/gestalt-principles#11._symmetry_and_order-13" alt="Interaction Design Foundation article, The Gestalt Principles">Interaction Design Foundation</a>. A more indepth explanation of the principles can be found on their website.</p>
+
         </section>
 
+        <section id="section3">
+            <h2>Law of Proximity in Action</h2>
+            <p>
+                The law of proximity can be demonstrated quite easily. Below is an example
+                sentence, some letters are close together and others aren’t as is typical for a
+                sentence but in its current state it is just gibberish. By pressing the button some
+                letters change proximity and the sentence becomes readable.
+            </p>
+            <div class="interactiveContainer">
+                <h3 id="proxScrambled">Ac ompletese ntencema k essense</h3>
+                <h3 id="proxUnscrambled" style="display: none">A complete sentence makes sense</h3>
+                <button class="buttonSecondary" onclick="proxToggle()">Toggle</button>
+            </div>  
 
-        <section id="section3" class="sectionStripes">
-            <div id="quizStart" class="quizElem">
+        </section>
+
+        <!--Embedded YouTube video-->
+        <section id="section4">
+            <h2>Law of Similarity in Action</h2>
+            <p>Expanding on the previous description, the law of similarity is utilised 
+                by designers by giving elements they wish the user to see as a group similar traits. 
+                These traits can be anything from colour or shape to font or orientation (Moran, K 2024). This principle is 
+                especially useful for when elements need to be singled out from a large list or grid. The singling 
+                out application can been seen in effect when looking at a link on a page. By giving a link a different 
+                colour and underlining it a designer can communicate that this particular text is different to other 
+                text on the page.
+            </p>
+            <div class="embedded-content">
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/aTYn1Ac6-Tk" title="Similarity: Gestalt Principle for User Interface Design" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>    
+        </section>
+
+        
+
+
+        <section id="section5" >
+            <!--First quiz container-->
+            <div id="quizStart" class="interactiveContainer">
                 <h2>Test your knowledge</h2>
                 <p>Take this short quiz to test your knowledge of gestalt principles.</p>
 
                 <button id="quizStartButton" class="buttonSecondary" onclick="startQuiz()">Start</button>
             </div>
 
-            <div id="quizFormContainer" class="quizElem" hidden="">
+            <!--Second quiz container-->
+            <div id="quizFormContainer" class="questionContainer" hidden="">
                 <form onsubmit="return false" id="quizForm">
-                    <p>Choose 1:</p>
+                    <p>Who founded the Gestalt school of psychology?</p>
 
                         <input type="radio" id="q1Ans1" name="q1Ans" value="one">
-                        <label for="q1Ans1">one</label><br>   
+                        <label for="q1Ans1">1. Max Wertheimer</label><br/>   
                         <input type="radio" id="q1Ans2" name="q1Ans" value="two">
-                        <label for="q1Ans2">two</label><br>
+                        <label for="q1Ans2">2. Jakob Nielsen</label><br/>
                         <input type="radio" id="q1Ans3" name="q1Ans" value="three">
-                        <label for="q1Ans3">three</label>
+                        <label for="q1Ans3">3. Steve Jobs</label>
                         <!--Breaks added for aesthetics, they serve no other function-->
                         <br><br> 
 
-                    <p>Choose 2:</p>
+                    <p>Which century were the Gestalt principles introduced?</p>
 
                         <input type="radio" id="q2Ans1" name="q2Ans" value="one">
-                        <label for="q2Ans1">one</label><br>   
+                        <label for="q2Ans1">1. 19th Century</label><br>   
                         <input type="radio" id="q2Ans2" name="q2Ans" value="two">
-                        <label for="q2Ans2">two</label><br>
+                        <label for="q2Ans2">2. 20th Century</label><br>
                         <input type="radio" id="q2Ans3" name="q2Ans" value="three">
-                        <label for="q2Ans3">three</label>
+                        <label for="q2Ans3">3. 21st Century</label>
                         <br><br>
 
-                    <p>Choose 3:</p>
+                    <p>“Elements that are closer together are grouped <br/> 
+                        together” is an example of which principle?</p>
                     
                         <input type="radio" id="q3Ans1" name="q3Ans" value="one">
-                        <label for="q3Ans1">one</label><br>   
+                        <label for="q3Ans1">Similarity</label><br>   
                         <input type="radio" id="q3Ans2" name="q3Ans" value="two">
-                        <label for="q3Ans2">two</label><br>
+                        <label for="q3Ans2">Closure</label><br>
                         <input type="radio" id="q3Ans3" name="q3Ans" value="three">
-                        <label for="q3Ans3">three</label>
+                        <label for="q3Ans3">Proximity</label>
                         <br><br>
 
                         <button id="quizSubmit" class="buttonSecondary" onclick="submitAns()">See results</button>
                 </form>
             </div>
 
-            <div id="quizEnd" class="quizElem" hidden="">
+            <!--Third quiz container-->
+            <div id="quizEnd" class="interactiveContainer" hidden="">
                 <h3 id="scoreTotal"></h3>
+                <br/>
                 <button class="buttonSecondary" onclick="restartQuiz()">Restart</button>
             </div>
         </section>
-        <section id="section4">
+        <section id="section6">
 
-            <h2>Contact me for more information</h2>
+            <h2>Contact us for more information</h2>
 
             <form action="https://formspree.io/22596052@stu.mmu.ac.uk" method="post">
                 <p>
@@ -152,7 +251,14 @@
 
                     <span class="footer-text">Rosie Pelusi</span>
                     <span class="footer-separator">·</span>
-                    <span class="footer-text">This is my coursework</span>
+                    <span class="footer-text">This is university coursework</span>
+                    <p>
+                        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                            <img style="border:0;width:88px;height:31px"
+                                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                                alt="Valid CSS!" />
+                        </a>
+                    </p>
 
                 </p>
             </div>

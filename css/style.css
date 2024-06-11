@@ -39,6 +39,7 @@ h1,
 h2,
 h3 {
     color: #eeba2b;
+    padding: 0 0 1rem 0;
 }
 
 p {
@@ -68,7 +69,7 @@ img {
 
 section {
     max-width: 65ch;
-    margin: 3rem auto 5rem auto;
+    margin: 3rem auto 3rem auto;
     padding: 1rem;
 }
 
@@ -89,12 +90,11 @@ section h2 {
 }
 
 .page-header {
-    background-color: #c0af1248;
-    background-image: url(../images/trolley.jpg);
+    background-image: url(../images/bgImage.png);
     background-blend-mode: screen;
     background-size: cover;
     display: flex;
-    min-height: 55vh;
+    min-height: 55vh; /*reduced min height*/
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -111,8 +111,9 @@ section h2 {
 }
 
 .page-footer {
-    background: #0A122A;
+    background: #262626;
     text-align: center;
+    border-top: solid 2px #7e7e7e;
 }
 
 .footer-content {
@@ -147,28 +148,41 @@ form textarea {
 form input[type="radio"] {
     font-size: 1.4rem;
     padding: 5px;
-    border-radius: auto;
     border: 1px solid #ccc;
-    max-width: auto;
-    min-width: auto;
 } 
 
 button {
     font-family: 'Readex Pro', sans-serif;
     font-size: 90%;
+    width: 10rem;
     color: #0A122A;
     border: none;
     align-self: center; 
 }
 
+
+/*Navigation bar classes*/
+
+/*Nav menu at top*/
 .navBarContainer {
     max-width: 100vw;
     margin: 0;
     padding: 0;
     background-color: #eeba2b;
-    padding: 0;
-    align-self: auto;
     text-align: center;
+}
+
+/*Nav menu on scroll*/
+.navBarContainerFixed {
+    position: fixed;
+    top: 0;
+    width: 15vw;
+    min-width: 10rem;
+    margin: 0;
+    padding: 3vh 0 90vh 0;
+    background-color: #eeba2b;
+    text-align: right;
+    display: block;
 }
 
 .navButton {
@@ -183,9 +197,23 @@ button {
     border-bottom:1px solid #0A122A;
 }
 
+.topScrollHidden {
+    display: none;
+}
+
+.topScroll {
+    background-color: #eeba2b;
+}
+
+.topScroll:hover {
+    cursor: pointer;
+}
+
 .mobileNavMenu {
     display: none;  
 }
+
+/*Non-navigation buttons*/
 
 .buttonSecondary {
     background-color: #eeba2b;
@@ -200,35 +228,89 @@ button {
     cursor: pointer;
 }
 
-/*.sectionStripes{
-    background-color: 
-}*/
+/*containers*/
+
+.interactiveContainer {
+    text-align: center;
+}
+
+.questionContainer {
+    text-align: left;
+    margin-left: 12vw;
+}
+
+.imageContainer {
+    text-align: center;
+}
 
 /*Responsive CSS*/
+/*Tablet view*/
+@media screen and (max-width: 1080px) and (min-width: 600px) {
+    
+    section{
+        margin-left: 10rem;
+    }
+}
+
+/*Mobile view*/
 @media screen and (max-width: 600px) {
 
+    .section1 {
+        margin: 0 auto 5rem auto;
+    }
+
+    .topScroll{
+        display: inline-flex;
+        margin-right: 65vw;
+        padding: 0.5rem;
+        text-align: right;
+        max-width: 64px;
+    }
+
     .navButton {
-        margin: 0.5rem 25vw;
-        background-color: #ff3c3c00;      
-        padding: 0;
-        border-bottom:none;
         display: none;
     }
 
-    .navButtonDisplay {
-        margin: 0.5rem 25vw;
+    .navButtonMobile {
+        margin: 0.5rem 30vw;
         background-color: #ff3c3c00;      
         padding: 0;
         border-bottom:none;
-        display: auto;
+        opacity: 1;
+	    animation-name: navFadeIn;
+	    animation-iteration-count: 1;
+	    animation-timing-function: ease-in;
+	    animation-duration: 300ms;
     }
     
+    .navBarContainerFixed {
+        position: fixed;
+        width: 100vw;
+        max-width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #eeba2b;
+        text-align: center;
+    }
+
     .mobileNavMenu {
-        display: block;
-        background-color: #ff3c3c00; 
-        /*background: url(.../images/hamburgerIco.png);*/    
-        padding: 1rem 2rem;
-        border-bottom:1px solid #ff3c3c00;
+        display: inline-flex;
+        text-align: left;
+        background-image: url(.../images/hamburgerIcon.png);  
+        background-color: #eeba2b;
+        padding: 0.5rem;
+        width: 4rem;
+        border-bottom: 1px solid #ff3c3c00;
     }
-    
+
+    @keyframes navFadeIn {
+        0% { 
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
 }
